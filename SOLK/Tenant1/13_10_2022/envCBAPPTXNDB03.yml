@@ -1,0 +1,43 @@
+parameter_defaults:
+    # Environment variables for Heat template of AMMS VM
+
+
+
+    # VM related parameters
+    name: appcb03
+    hostname: solktxesw0mvvrgw-c-mb-vim-03
+    flavor: Mobileum-vRGW-VM_InMemory
+    image_id: rgw-mo-couchbase_6.0.4
+    volume_id: c797f0c9-d224-41ea-a7ac-3014e793d4d4
+    availability_zone: nova
+
+
+
+    # Network Port
+    private_port: asdfsdf243
+    public_WSN_port: 34534sdfdf
+    public_SS7_1_port: w987sjdfjsdfj
+    public_SS7_2_port: 4w345dg
+
+
+
+    # Network Interface
+    public_EDNv4_ip: 4w345dg
+    public_EDN_Netmask: 255.255.255.192
+    public_EDN_GATEWAY: 63.50.100.65
+    public_EDNv6_ip: 2607:f160:8a03:802c:00c0:011e::61
+    public_EDN_IPV6_DEFAULTGW: 2607:f160:8a03:802c:00c0:000a::1
+    private_ip: 192.168.10.62
+    private_Netmask: 255.255.255.0
+    private_GATEWAY: 192.168.10.1
+
+
+
+    # Routes
+    route_1: "#######SMTP Routes#######\n2001:4888:a03:310b:c0:9::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a02:310c:a0:9::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######HPOV Routes Dev#######\n2001:4888:a03:210a:c0:fef:0:250 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######HPOV Routes#######\n2001:4888:a03:210a:c0:fef::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a01:2106:a1:fef::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######NTP Routes#######\n2001:4888:a03:310a:00c0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a02:310a:00a0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a05:310a:00e0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a04:310a:00b0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######SevOne Routes#######\n2001:4888:a02:1f24::/64 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a03:1f24::/64 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n"
+    route_2: "######Inter-Site Connecvity######\n2607:f160:8a05:8021:e0:11e::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n"
+
+
+
+    # NFS
+    nfs_server: "anti-affinity"

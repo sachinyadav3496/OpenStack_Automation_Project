@@ -1,0 +1,1272 @@
+{
+     "server_group_commands": [
+          {
+               "create": "openstack server group create --policy affinity sg1",
+               "sg1": "openstack server group show sg1 -f value -c id"
+          },
+          {
+               "create": "openstack server group create --policy anti-affinity sg2",
+               "sg2": "openstack server group show sg2 -f value -c id"
+          },
+          {
+               "create": "openstack server group create --policy affinity sg3",
+               "sg3": "openstack server group show sg3 -f value -c id"
+          },
+          {
+               "create": "openstack server group create --policy affinity sg4",
+               "sg4": "openstack server group show sg4 -f value -c id"
+          },
+          {
+               "create": "openstack server group create --policy anti-affinity sg5",
+               "sg5": "openstack server group show sg5 -f value -c id"
+          }
+     ],
+     "instance_commands": [
+          {
+               "0": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcb01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.99 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::59",
+                              "public_EDN_port": "openstack port show appcb01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcb01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.60",
+                              "private_port": "openstack port show appcb01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": [
+                         {
+                              "create": "openstack volume create --size 5 solktxesw0mvvrgw-c-mb-vim-01vol",
+                              "volume_id": "openstack volume show solktxesw0mvvrgw-c-mb-vim-01vol -f value -c id"
+                         },
+                         {
+                              "create": "openstack volume create --size 30 solktxesw0mvvrgw-c-mb-vim-01vol2",
+                              "volume_id2": "openstack volume show solktxesw0mvvrgw-c-mb-vim-01vol2 -f value -c id"
+                         }
+                    ]
+               }
+          },
+          {
+               "1": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcb02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.100 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::60",
+                              "public_EDN_port": "openstack port show appcb02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcb02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.61",
+                              "private_port": "openstack port show appcb02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": [
+                         {
+                              "create": "openstack volume create --size 10 solktxesw0mvvrgw-c-mb-vim-02vol",
+                              "volume_id": "openstack volume show solktxesw0mvvrgw-c-mb-vim-02vol -f value -c id"
+                         }
+                    ]
+               }
+          },
+          {
+               "2": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcb03edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.101 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::61",
+                              "public_EDN_port": "openstack port show appcb03edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcb03private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.62",
+                              "private_port": "openstack port show appcb03private -f value -c id"
+                         }
+                    ],
+                    "volume_create": [
+                         {
+                              "create": "openstack volume create --size 20 solktxesw0mvvrgw-c-mb-vim-03vol",
+                              "volume_id": "openstack volume show solktxesw0mvvrgw-c-mb-vim-03vol -f value -c id"
+                         },
+                         {
+                              "create": "openstack volume create --size 50 solktxesw0mvvrgw-c-mb-vim-03vol3",
+                              "volume_id3": "openstack volume show solktxesw0mvvrgw-c-mb-vim-03vol3 -f value -c id"
+                         }
+                    ]
+               }
+          },
+          {
+               "3": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcb04edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.102 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::62",
+                              "public_EDN_port": "openstack port show appcb04edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcb04private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.63",
+                              "private_port": "openstack port show appcb04private -f value -c id"
+                         }
+                    ],
+                    "volume_create": [
+                         {
+                              "create": "openstack volume create --size 10 solktxesw0mvvrgw-c-mb-vim-04vol",
+                              "volume_id": "openstack volume show solktxesw0mvvrgw-c-mb-vim-04vol -f value -c id"
+                         }
+                    ]
+               }
+          },
+          {
+               "4": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcb05edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.103 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::63",
+                              "public_EDN_port": "openstack port show appcb05edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcb05private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.64",
+                              "private_port": "openstack port show appcb05private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "5": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcb06edn --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::64",
+                              "public_EDN_port": "openstack port show appcb06edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcb06private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.65",
+                              "private_port": "openstack port show appcb06private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "6": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcbindex01edn --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::65",
+                              "public_EDN_port": "openstack port show appcbindex01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcbindex01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.66",
+                              "private_port": "openstack port show appcbindex01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "7": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 appcbindex02edn --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::66",
+                              "public_EDN_port": "openstack port show appcbindex02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc appcbindex02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.67",
+                              "private_port": "openstack port show appcbindex02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "8": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cosengine01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.79 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::12",
+                              "public_EDN_port": "openstack port show cosengine01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cosengine01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.5 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show cosengine01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cosengine01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::2",
+                              "public_RAN_port": "openstack port show cosengine01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cosengine01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.13",
+                              "private_port": "openstack port show cosengine01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "9": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cosengine02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.80 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::13",
+                              "public_EDN_port": "openstack port show cosengine02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cosengine02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.5 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show cosengine02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cosengine02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::2",
+                              "public_RAN_port": "openstack port show cosengine02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cosengine02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.14",
+                              "private_port": "openstack port show cosengine02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "10": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.112 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::41",
+                              "public_EDN_port": "openstack port show mtascb01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.42",
+                              "private_port": "openstack port show mtascb01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "11": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.113 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::42",
+                              "public_EDN_port": "openstack port show mtascb02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.43",
+                              "private_port": "openstack port show mtascb02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "12": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb03edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.114 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::43",
+                              "public_EDN_port": "openstack port show mtascb03edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb03private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.44",
+                              "private_port": "openstack port show mtascb03private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "13": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb04edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.115 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::44",
+                              "public_EDN_port": "openstack port show mtascb04edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb04private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.45",
+                              "private_port": "openstack port show mtascb04private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "14": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb05edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.116 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::45",
+                              "public_EDN_port": "openstack port show mtascb05edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb05private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.46",
+                              "private_port": "openstack port show mtascb05private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "15": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb06edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.117 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::46",
+                              "public_EDN_port": "openstack port show mtascb06edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb06private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.47",
+                              "private_port": "openstack port show mtascb06private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "16": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb07edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.118 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::47",
+                              "public_EDN_port": "openstack port show mtascb07edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb07private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.48",
+                              "private_port": "openstack port show mtascb07private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "17": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb08edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.119 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::48",
+                              "public_EDN_port": "openstack port show mtascb08edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb08private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.49",
+                              "private_port": "openstack port show mtascb08private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "18": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb09edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.120 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::49",
+                              "public_EDN_port": "openstack port show mtascb09edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb09private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.50",
+                              "private_port": "openstack port show mtascb09private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "19": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb10edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.121 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::50",
+                              "public_EDN_port": "openstack port show mtascb10edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb10private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.51",
+                              "private_port": "openstack port show mtascb10private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "20": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb11edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.122 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::51",
+                              "public_EDN_port": "openstack port show mtascb11edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb11private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.52",
+                              "private_port": "openstack port show mtascb11private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "21": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb12edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.123 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::52",
+                              "public_EDN_port": "openstack port show mtascb12edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb12private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.53",
+                              "private_port": "openstack port show mtascb12private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "22": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb13edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.124 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::53",
+                              "public_EDN_port": "openstack port show mtascb13edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb13private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.54",
+                              "private_port": "openstack port show mtascb13private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "23": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascb14edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.125 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::54",
+                              "public_EDN_port": "openstack port show mtascb14edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascb14private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.55",
+                              "private_port": "openstack port show mtascb14private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "24": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascbindex01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.97 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::55",
+                              "public_EDN_port": "openstack port show mtascbindex01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascbindex01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.56",
+                              "private_port": "openstack port show mtascbindex01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "25": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascbindex02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.98 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::56",
+                              "public_EDN_port": "openstack port show mtascbindex02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascbindex02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.57",
+                              "private_port": "openstack port show mtascbindex02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "26": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 mtascbbackupedn --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::67",
+                              "public_EDN_port": "openstack port show mtascbbackupedn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc mtascbbackupprivate --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.68",
+                              "private_port": "openstack port show mtascbbackupprivate -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "27": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 dbwriter01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.76 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::9",
+                              "public_EDN_port": "openstack port show dbwriter01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 dbwriter01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show dbwriter01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 dbwriter01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show dbwriter01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc dbwriter01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.10",
+                              "private_port": "openstack port show dbwriter01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "28": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 dbwriter02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.77 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::10",
+                              "public_EDN_port": "openstack port show dbwriter02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 dbwriter02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show dbwriter02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 dbwriter02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show dbwriter02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc dbwriter02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.11",
+                              "private_port": "openstack port show dbwriter02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "29": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cldsim01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.78 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::11",
+                              "public_EDN_port": "openstack port show cldsim01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cldsim01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::3",
+                              "public_WSN_port": "openstack port show cldsim01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cldsim01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show cldsim01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cldsim01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.12",
+                              "private_port": "openstack port show cldsim01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "30": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 tcap01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.86 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::19",
+                              "public_EDN_port": "openstack port show tcap01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 tcap01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show tcap01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 tcap01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show tcap01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc tcap01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.20",
+                              "private_port": "openstack port show tcap01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "31": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 tcap02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.87 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::20",
+                              "public_EDN_port": "openstack port show tcap02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 tcap02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show tcap02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 tcap02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show tcap02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc tcap02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.21",
+                              "private_port": "openstack port show tcap02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "32": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gui01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.81 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::14",
+                              "public_EDN_port": "openstack port show gui01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gui01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show gui01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 gui01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show gui01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc gui01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.15",
+                              "private_port": "openstack port show gui01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "33": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 svms01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.70 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::57",
+                              "public_EDN_port": "openstack port show svms01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 svms01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show svms01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 svms01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::1",
+                              "public_RAN_port": "openstack port show svms01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc svms01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.58",
+                              "private_port": "openstack port show svms01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "34": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 svms02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.70 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::58",
+                              "public_EDN_port": "openstack port show svms02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 svms02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show svms02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 svms02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::1",
+                              "public_RAN_port": "openstack port show svms02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc svms02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.59",
+                              "private_port": "openstack port show svms02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "35": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 pmms01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.105 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::85",
+                              "public_EDN_port": "openstack port show pmms01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc pmms01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.81",
+                              "private_port": "openstack port show pmms01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "36": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 pmms02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.106 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::86",
+                              "public_EDN_port": "openstack port show pmms02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc pmms02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.82",
+                              "private_port": "openstack port show pmms02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "37": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sstp01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.68 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::1",
+                              "public_EDN_port": "openstack port show sstp01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sstp01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show sstp01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network a49a070b-272e-4c6e-98a1-c91a37ebc5af sstp01ss7_1 --fixed-ip subnet=33d4bdb8-3e77-4529-97db-1beed4c78e46, ip-address=172.16.215.68",
+                              "public_SS7_1_port": "openstack port show sstp01ss7_1 -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 66e5718b-f28a-471f-9833-f47761fd6f15 sstp01ss7_2 --fixed-ip subnet=c02eda3b-99f6-41cb-9975-60dd8408e6b7, ip-address=172.16.215.84",
+                              "public_SS7_2_port": "openstack port show sstp01ss7_2 -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sstp01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.2",
+                              "private_port": "openstack port show sstp01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "38": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sstp02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.69 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::2",
+                              "public_EDN_port": "openstack port show sstp02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sstp02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show sstp02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network a49a070b-272e-4c6e-98a1-c91a37ebc5af sstp02ss7_1 --fixed-ip subnet=33d4bdb8-3e77-4529-97db-1beed4c78e46, ip-address=172.16.215.69",
+                              "public_SS7_1_port": "openstack port show sstp02ss7_1 -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 66e5718b-f28a-471f-9833-f47761fd6f15 sstp02ss7_2 --fixed-ip subnet=c02eda3b-99f6-41cb-9975-60dd8408e6b7, ip-address=172.16.215.85",
+                              "public_SS7_2_port": "openstack port show sstp02ss7_2 -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sstp02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.3",
+                              "private_port": "openstack port show sstp02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "39": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sdra01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.70 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::3",
+                              "public_EDN_port": "openstack port show sdra01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sdra01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show sdra01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sdra01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::1",
+                              "public_RAN_port": "openstack port show sdra01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sdra01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.4",
+                              "private_port": "openstack port show sdra01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "40": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sdra02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.71 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::4",
+                              "public_EDN_port": "openstack port show sdra02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sdra02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.5 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show sdra02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sdra02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::2",
+                              "public_RAN_port": "openstack port show sdra02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sdra02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.5",
+                              "private_port": "openstack port show sdra02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "41": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sor01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.72 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::5",
+                              "public_EDN_port": "openstack port show sor01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sor01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::4",
+                              "public_WSN_port": "openstack port show sor01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sor01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show sor01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sor01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.6",
+                              "private_port": "openstack port show sor01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "42": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sor02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.73 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::6",
+                              "public_EDN_port": "openstack port show sor02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sor02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::4",
+                              "public_WSN_port": "openstack port show sor02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sor02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show sor02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sor02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.7",
+                              "private_port": "openstack port show sor02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "43": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sorvam01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.74 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::7",
+                              "public_EDN_port": "openstack port show sorvam01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sorvam01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::4",
+                              "public_WSN_port": "openstack port show sorvam01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sorvam01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show sorvam01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sorvam01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.8",
+                              "private_port": "openstack port show sorvam01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "44": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sorvam02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.75 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::8",
+                              "public_EDN_port": "openstack port show sorvam02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 sorvam02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::4",
+                              "public_WSN_port": "openstack port show sorvam02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 sorvam02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show sorvam02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc sorvam02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.9",
+                              "private_port": "openstack port show sorvam02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "45": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 odsvam01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.126 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::84",
+                              "public_EDN_port": "openstack port show odsvam01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 odsvam01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show odsvam01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 odsvam01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show odsvam01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc odsvam01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.80",
+                              "private_port": "openstack port show odsvam01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "46": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.82 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::15",
+                              "public_EDN_port": "openstack port show amms01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show amms01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 amms01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show amms01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc amms01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.16",
+                              "private_port": "openstack port show amms01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "47": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.83 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::16",
+                              "public_EDN_port": "openstack port show amms02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show amms02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 amms02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show amms02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc amms02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.17",
+                              "private_port": "openstack port show amms02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "48": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms03edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.84 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::17",
+                              "public_EDN_port": "openstack port show amms03edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms03wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show amms03wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 amms03ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show amms03ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc amms03private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.18",
+                              "private_port": "openstack port show amms03private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "49": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms04edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.85 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::18",
+                              "public_EDN_port": "openstack port show amms04edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 amms04wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show amms04wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 amms04ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show amms04ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc amms04private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.19",
+                              "private_port": "openstack port show amms04private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "50": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cdmahlr01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.96 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::89",
+                              "public_EDN_port": "openstack port show cdmahlr01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cdmahlr01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::4",
+                              "public_WSN_port": "openstack port show cdmahlr01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cdmahlr01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show cdmahlr01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cdmahlr01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.85",
+                              "private_port": "openstack port show cdmahlr01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "51": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cdmahlr02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.97 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::90",
+                              "public_EDN_port": "openstack port show cdmahlr02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cdmahlr02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::5",
+                              "public_WSN_port": "openstack port show cdmahlr02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cdmahlr02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show cdmahlr02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cdmahlr02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.86",
+                              "private_port": "openstack port show cdmahlr02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "52": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 csrsc01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.88 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::21",
+                              "public_EDN_port": "openstack port show csrsc01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 csrsc01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show csrsc01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 csrsc01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::5",
+                              "public_RAN_port": "openstack port show csrsc01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc csrsc01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.22",
+                              "private_port": "openstack port show csrsc01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "53": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 csrsc02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.89 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::22",
+                              "public_EDN_port": "openstack port show csrsc02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 csrsc02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show csrsc02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 csrsc02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::6",
+                              "public_RAN_port": "openstack port show csrsc02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc csrsc02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.23",
+                              "private_port": "openstack port show csrsc02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "54": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cssm01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.90 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::23",
+                              "public_EDN_port": "openstack port show cssm01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cssm01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.5 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show cssm01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cssm01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show cssm01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cssm01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.24",
+                              "private_port": "openstack port show cssm01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "55": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cssm02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.91 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::24",
+                              "public_EDN_port": "openstack port show cssm02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 cssm02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=67.163.110.5 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:c:6204:ce:11e::6",
+                              "public_WSN_port": "openstack port show cssm02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 cssm02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::4",
+                              "public_RAN_port": "openstack port show cssm02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc cssm02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.25",
+                              "private_port": "openstack port show cssm02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "56": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 smlp01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.92 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::25",
+                              "public_EDN_port": "openstack port show smlp01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 smlp01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show smlp01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 smlp01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show smlp01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc smlp01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.26",
+                              "private_port": "openstack port show smlp01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "57": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 smlp02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.93 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::26",
+                              "public_EDN_port": "openstack port show smlp02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 smlp02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show smlp02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 smlp02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show smlp02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc smlp02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.27",
+                              "private_port": "openstack port show smlp02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "58": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gtp01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.94 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::27",
+                              "public_EDN_port": "openstack port show gtp01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gtp01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::1",
+                              "public_WSN_port": "openstack port show gtp01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 gtp01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show gtp01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc gtp01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.28",
+                              "private_port": "openstack port show gtp01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "59": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gtp02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.95 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::28",
+                              "public_EDN_port": "openstack port show gtp02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gtp02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.5 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::2",
+                              "public_WSN_port": "openstack port show gtp02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 gtp02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show gtp02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc gtp02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.29",
+                              "private_port": "openstack port show gtp02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "60": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gri01edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.107 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::71",
+                              "public_EDN_port": "openstack port show gri01edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gri01wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::4",
+                              "public_WSN_port": "openstack port show gri01wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 gri01ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show gri01ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc gri01private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.72",
+                              "private_port": "openstack port show gri01private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          },
+          {
+               "61": {
+                    "port_create": [
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gri02edn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=63.50.100.108 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8a03:802c:00c0:011e::72",
+                              "public_EDN_port": "openstack port show gri02edn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 8c552c1c-7ed7-4a1e-8349-6a4832340ac5 gri02wsn --fixed-ip subnet=b44ef646-f149-4e3a-8e8b-b2a40f30b488, ip-address=167.163.110.4 --fixed-ip subnet=31d033b0-af05-4721-9459-07cfcc098d04, ip-address=2607:f160:8003:8010:00c0:011E::5",
+                              "public_WSN_port": "openstack port show gri02wsn -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 3aaba9ca-a429-4c96-8d2c-32493e751828 gri02ran --fixed-ip subnet=ad78ec25-a767-4daf-a4a8-2e00845b4321, ip-address=2607:f160:8203:8016:00c0:011e::3",
+                              "public_RAN_port": "openstack port show gri02ran -f value -c id"
+                         },
+                         {
+                              "create": "openstack port create --network 009ac975-94e7-4116-b1b3-4a3c7c371fdc gri02private --fixed-ip subnet=c8ed12bf-3615-4857-a7c7-fb50b4ddfd81, ip-address=192.168.10.73",
+                              "private_port": "openstack port show gri02private -f value -c id"
+                         }
+                    ],
+                    "volume_create": []
+               }
+          }
+     ]
+}

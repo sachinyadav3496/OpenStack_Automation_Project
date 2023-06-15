@@ -1,0 +1,49 @@
+# EDN / WSN 
+#    hostname+network type -> network port name
+openstack port create --network {network id} {portname} --fixed-ip subnet={subnetid1},ip-address={ipaddress1} --fixed-ip subnet={subnetid2},ip-address={ipaddress2}
+
+where portname = hostname+network type
+eg.
+ess=fd69:93c1:8105:60e9::208 --fixed-ip subnet=oamsub,ip-address=172.16.60.208
+
+# OTHER Networks
+openstack port create --network {network id} {portname} --fixed-ip subnet={subnetid},ip-address={ipaddress}
+eg.
+
+openstack port create --network private cpnfs01pvt --fixed-ip subnet=privatesub,ip-address=192.168.10.211
+
+To get the port id of the port created:openstack port create --network OAM rscps01edn --fixed-ip subnet=oamv6-subnet,ip-addr
+openstack port show {portname} -f value -c id
+
+eg:
+openstack port show cpnfs01pvt -f value -c id
+
+
+#####Volumes
+
+openstack volume create --size {size in GB} {volumename}
+
+where volumename = hostname+'vol'+# . eg. cpdb01vol1, cpdb01vol2
+
+eg:
+openstack volume create --size 8 cpdb01vol1
+
+To get the vol id of the port created:
+openstack volume show {volumename} -f value -c id
+eg.
+openstack volume show cpdb01vol1 -f value -c id
+
+#############server group
+
+openstack server group create --policy <policy>    <name>
+where
+policy can be ‘affinity’ or ‘anti-affinity’
+name as per global sheet
+
+For creating server group entries:
+- add a table in global config sheet which will have two columns:
+server group name, affinity
+
+use this table to generate commands and get the IDs.
+
+VM sheet will have another column called server group name (but this will not be part of final env files). As per value here, the 'server_group' col would be updated with ID generated.

@@ -1,0 +1,34 @@
+parameter_defaults:
+    # Environment variables for Heat template of AMMS VM
+
+
+
+    # VM related parameters
+    name: mtascbbackup
+    hostname: solktxesw0mvvrgw-c-mb-dbb-01
+    flavor: Mobileum-vRGW-VM_MTASDB_Backup
+    image_id: rgw-mo-couchbase_6.0.4
+    volume_id: f035d865-4f00-4ede-8cd5-df575a9da2b8
+    availability_zone: nova
+
+
+
+    # Network Port
+
+
+
+    # Network Interface
+    public_EDNv6_ip: 2607:f160:8a03:802c:00c0:011e::67
+    public_EDN_IPV6_DEFAULTGW: 2607:f160:8a03:802c:00c0:000a::1
+    private_ip: 192.168.10.68
+    private_Netmask: 255.255.255.0
+    private_GATEWAY: 192.168.10.1
+
+
+
+    # Routes
+
+
+
+    # NFS
+    nfs_server: "anti-affinity"

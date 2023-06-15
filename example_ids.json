@@ -1,0 +1,1 @@
+{"server_group_ids": {"sg1": "ABCDEFGHIJ12345", "sg2": "DEFGHI8123ABD12", "sg3": "ABDEF1234GHIJK"}, "port_volume_ids": {"0": {"port_ids": {"public_EDN_port": "ABDE", "private_port": "FGHIJ"}, "volume_ids": {"volume_id": "abcd123", "volume_id2": "def456"}}, "1": {"port_ids": {"public_EDN_port": "123ABC", "private_port": "JHKLM"}, "volume_ids": {"volume_id": "haahaahaa"}}}}

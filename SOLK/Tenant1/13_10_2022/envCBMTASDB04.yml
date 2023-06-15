@@ -1,0 +1,38 @@
+parameter_defaults:
+    # Environment variables for Heat template of AMMS VM
+
+
+
+    # VM related parameters
+    name: mtascb04
+    hostname: solktxesw0mvvrgw-c-mb-mdb-04
+    flavor: HP16-64-160-0
+    image_id: rgw-mo-couchbase_6.0.4
+    volume_id: 9ebad146-32f2-4105-bd60-04f5fb05c89f
+    availability_zone: nova
+
+
+
+    # Network Port
+
+
+
+    # Network Interface
+    public_EDNv4_ip: nova
+    public_EDN_Netmask: 255.255.255.192
+    public_EDN_GATEWAY: 63.50.100.65
+    public_EDNv6_ip: 2607:f160:8a03:802c:00c0:011e::44
+    public_EDN_IPV6_DEFAULTGW: 2607:f160:8a03:802c:00c0:000a::1
+    private_ip: 192.168.10.45
+    private_Netmask: 255.255.255.0
+    private_GATEWAY: 192.168.10.1
+
+
+
+    # Routes
+    route_1: "######Inter-Site Connecvity######\n2607:f160:8a05:8021:e0:11e::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n"
+
+
+
+    # NFS
+    nfs_server: "anti-affinity"

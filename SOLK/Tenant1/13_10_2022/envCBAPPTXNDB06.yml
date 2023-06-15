@@ -1,0 +1,35 @@
+parameter_defaults:
+    # Environment variables for Heat template of AMMS VM
+
+
+
+    # VM related parameters
+    name: appcb06
+    hostname: solktxesw0mvvrgw-c-mb-vim-06
+    flavor: Mobileum-vRGW-VM_InMemory
+    image_id: rgw-mo-couchbase_6.0.4
+    volume_id: bd314fd1-44f8-42e8-8644-14b7c5b12bf6
+    availability_zone: nova
+
+
+
+    # Network Port
+
+
+
+    # Network Interface
+    public_EDNv6_ip: 2607:f160:8a03:802c:00c0:011e::64
+    public_EDN_IPV6_DEFAULTGW: 2607:f160:8a03:802c:00c0:000a::1
+    private_ip: 192.168.10.65
+    private_Netmask: 255.255.255.0
+    private_GATEWAY: 192.168.10.1
+
+
+
+    # Routes
+    route_1: "######Inter-Site Connecvity######\n2607:f160:8a05:8021:e0:11e::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n"
+
+
+
+    # NFS
+    nfs_server: "anti-affinity"

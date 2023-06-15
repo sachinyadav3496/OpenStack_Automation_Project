@@ -1,0 +1,42 @@
+parameter_defaults:
+    # Environment variables for Heat template of AMMS VM
+
+
+
+    # VM related parameters
+    name: sorvam02
+    hostname: solktxesw0mvvrgw-c-mb-vam-02
+    flavor: Mobileum-vRGW-VM_SORVAM
+    image_id: rgw-mo-sor-rel10_1_R210606
+    volume_id: bf4ad031-97a3-4eaf-a8b4-7a97cdf0df55
+    availability_zone: nova
+
+
+
+    # Network Port
+
+
+
+    # Network Interface
+    public_EDNv4_ip: nova
+    public_EDN_Netmask: 255.255.255.192
+    public_EDN_GATEWAY: 63.50.100.65
+    public_EDNv6_ip: 2607:f160:8a03:802c:00c0:011e::8
+    public_RAN_ip: 2607:f160:8203:8016:00c0:011e::3
+    public_EDN_IPV6_DEFAULTGW: 2607:f160:8a03:802c:00c0:000a::1
+    public_RAN_IPV6_DEFAULTGW: 2607:f160:8203:8016:00c0:000c::1
+    private_ip: 192.168.10.9
+    private_Netmask: 255.255.255.0
+    private_GATEWAY: 192.168.10.1
+
+
+
+    # Routes
+    route_1: "#######SMTP Routes#######\n2001:4888:a03:310b:c0:9::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a02:310c:a0:9::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######HPOV Routes Dev#######\n2001:4888:a03:210a:c0:fef:0:250 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######HPOV Routes#######\n2001:4888:a03:210a:c0:fef::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a01:2106:a1:fef::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######NTP Routes#######\n2001:4888:a03:310a:00c0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a02:310a:00a0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a05:310a:00e0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a04:310a:00b0:0FEE::/112 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n#######SevOne Routes#######\n2001:4888:a02:1f24::/64 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n2001:4888:a03:1f24::/64 via 2607:f160:8a03:802b:00c0:000a::1 dev eth0\n"
+    route_2: "#######DNS Routes#######\n2001:4888:a03:311d:c0:9::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a06:311d:f0:9::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a02:311d:a0:9::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a00:f:0:103::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a03:311c:c0:103::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a06:311c:f0:103::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a02:311c:a0:103::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n########SIM-OTA Routes########\n2607:F160:8A05:80CE:00E0:012A::/112 via 2607:f160:8a03:802c:c0:a:0:1 dev eth1\n2001:4888:a03:312a:c0:9::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2001:4888:a05:3123:e0:9::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2607:F160:8A03:8037:C0:012A::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2607:F160:8A05:8035:E0:012A::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2607:f160:8a06:808b:f1:12a::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n2607:f160:8a02:90dc:a0:12a::/112 via 2607:f160:8a03:802c:c0:a:0:1 dev eth1\n2607:f160:8a06:80a9::/64 via 2607:f160:8a03:802c:c0:a:0:1 dev eth1\n2607:f160:8a06:80aa::/64 via 2607:f160:8a03:802c:c0:a:0:1 dev eth1\n2607:f160:8a02:90d9::/64 via 2607:f160:8a03:802c:c0:a:0:1 dev eth1\n2607:f160:8a02:90db::/64 via 2607:f160:8a03:802c:c0:a:0:1 dev eth1\n#######SOLK NA#########\n2001:4888:a03:310d:c0:11e::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n#######COSP NA#########\n2001:4888:a05:310d:e0:11e::/112 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n#######Inter-Site connectivity#########\n2607:f160:8a05:8021::/64 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n######VCP SOLK Hadoop Connectivity######\n2607:f160:8a03:8070::/64 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n######VCP COSP Hadoop Connectivity######\n2607:f160:8a05:804a::/64 via 2607:f160:8a03:802c:00c0:000a::1 dev eth1\n"
+    route_3: "#######SIMOTA IPv4 Routes#######\n10.133.9.11 via 63.50.100.65 dev eth2\n10.136.231.67 via 63.50.100.65 dev eth2\n#######Inter-Site connectivity EDN IPv4#########\n63.50.161.128/26 via 63.50.100.65 dev eth2\n##########BareMetal SOLK##########\n10.133.77.128/27 via 63.50.100.65 dev eth2\n##########BareMetal COSP##########\n10.136.187.0/27 via 63.50.100.65 dev eth2\n"
+
+
+
+    # NFS
+    nfs_server: "anti-affinity"
